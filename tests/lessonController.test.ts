@@ -152,7 +152,7 @@ async function createTest(query: CreateData, expectStatus = 200): Promise<number
 }
 
 beforeAll( function () {
-    return execute('psql -f test.sql my_class_test');
+    return execute('psql -f test.sql ' + process.env.TEST_DB);
 });
 afterAll(async () => {
     const schema = db.schema;
