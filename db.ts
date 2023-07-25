@@ -1,15 +1,17 @@
+import knex from "knex";
+import {config} from "dotenv";
+config();
 const env = process.env;
-
-const knex = require('knex')({
+const db = knex({
     client: 'postgresql',
     connection: {
         host : env.DB_HOST,
-        port : env.DB_PORT,
+        port : Number(env.DB_PORT),
         user : env.DB_USER,
         password : env.DB_PASSWORD,
-        database : env.DB_NAME
+        database : env.TEST === "TRUE" ? env.TEST_DB : env.DB_NAME
     }
 });
 
 
-export default knex;
+export default db;
