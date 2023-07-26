@@ -161,7 +161,7 @@ afterAll(async () => {
     await schema.dropTableIfExists('lessons');
     await schema.dropTableIfExists('students');
     await schema.dropTableIfExists('teachers');
-    db.destroy();
+    await db.destroy();
 });
 
 

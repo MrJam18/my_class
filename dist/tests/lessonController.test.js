@@ -205,6 +205,6 @@ afterAll(() => __awaiter(void 0, void 0, void 0, function* () {
     yield schema.dropTableIfExists('lessons');
     yield schema.dropTableIfExists('students');
     yield schema.dropTableIfExists('teachers');
-    db_1.default.destroy();
+    yield db_1.default.destroy();
 }));
 //# sourceMappingURL=lessonController.test.js.map

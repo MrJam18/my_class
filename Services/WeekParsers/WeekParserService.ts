@@ -24,7 +24,7 @@ export abstract class WeekParserService {
     {
         const weekStart = startOfWeek(this.startDate);
         this.currentDayOfWeek = differenceInDays(this.startDate, weekStart);
-        if(this.currentDayOfWeek < this.weekDays[0]) {
+        if(this.currentDayOfWeek <= this.weekDays[0]) {
             this.dateLoop();
         }
         else if(this.currentDayOfWeek > this.weekDays.at(-1)) {

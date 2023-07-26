@@ -16,7 +16,6 @@ const app_1 = __importDefault(require("./app"));
 app_1.default.use(onError);
 const PORT = process.env.PORT || 5000;
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(app_1.default.routes);
     try {
         app_1.default.listen(PORT, () => console.log('server started on port ' + PORT));
     }

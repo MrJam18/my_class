@@ -19,7 +19,7 @@ class WeekParserService {
     getDates() {
         const weekStart = (0, startOfWeek_1.default)(this.startDate);
         this.currentDayOfWeek = (0, differenceInDays_1.default)(this.startDate, weekStart);
-        if (this.currentDayOfWeek < this.weekDays[0]) {
+        if (this.currentDayOfWeek <= this.weekDays[0]) {
             this.dateLoop();
         }
         else if (this.currentDayOfWeek > this.weekDays.at(-1)) {

@@ -3,7 +3,6 @@ import app from "./app";
 app.use(onError);
 const PORT = process.env.PORT || 5000;
 const start = async () => {
-    console.log(app.routes);
     try {
         app.listen(PORT, () => console.log('server started on port ' + PORT));
     }
